@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="19dp">
+
+    <EditText
+        android:id="@+id/txt_user_uid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/stroke1"
+        android:hint="Enter uid here "
+        android:padding="4dp"
+        android:paddingStart="9dp"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/btn_verify_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_user_uid"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#DEF0F3"
+        android:padding="5dp"
+        android:text="Verify" />
+</RelativeLayout>

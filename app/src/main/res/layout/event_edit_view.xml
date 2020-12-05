@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:id="@+id/column3"
+        android:layout_width="@dimen/time_width"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:id="@+id/column1"
+        android:layout_width="56dp"
+        android:layout_height="0dp" />
+
+    <View
+        android:id="@+id/column2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_toStartOf="@id/column3"
+        android:layout_toLeftOf="@id/column3"
+        android:layout_toEndOf="@id/column1"
+        android:layout_toRightOf="@id/column1" />
+
+    <!-- Row 1 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_title"
+        style="@style/Widget.AppTheme.EventEditView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column2"
+        android:layout_alignLeft="@id/column2"
+        android:layout_alignEnd="@id/column3"
+        android:layout_alignRight="@id/column3"
+        app:hintAnimationEnabled="false"
+        app:hintTextAppearance="@style/TextAppearance.AppTheme.Hint.Disabled">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column1"
+        android:layout_alignLeft="@id/column1"
+        android:layout_alignTop="@id/text_input_title"
+        android:layout_alignEnd="@id/column1"
+        android:layout_alignRight="@id/column1"
+        android:layout_alignBottom="@id/text_input_title"
+        android:contentDescription="@string/event_time"
+        android:scaleType="center"
+        android:src="@drawable/ic_title_white_24dp"
+        android:tint="?android:attr/textColorHint"
+        tools:ignore="MissingPrefix"
+        tools:src="@drawable/ic_title_white_24dp" />
+
+    <View
+        android:id="@+id/row1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/text_input_title"
+        android:layout_alignBottom="@id/text_input_title" />
+
+    <View
+        android:id="@+id/row2"
+        android:layout_width="0dp"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:layout_below="@id/row1" />
+
+    <View
+        android:id="@+id/row3"
+        android:layout_width="0dp"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:layout_below="@id/row2" />
+
+    <View
+        android:id="@+id/row4"
+        android:layout_width="0dp"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:layout_below="@id/row3" />
+
+    <View
+        android:id="@+id/row45"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:layout_below="@id/row4"
+        android:layout_alignStart="@id/column2"
+        android:layout_alignLeft="@id/column2"
+        android:layout_alignEnd="@id/column3"
+        android:layout_alignRight="@id/column3"
+        android:background="@color/colorDivider" />
+
+    <View
+        android:id="@+id/row5"
+        android:layout_width="0dp"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:layout_below="@id/row45" />
+
+    <!-- Row 2 -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column1"
+        android:layout_alignLeft="@id/column1"
+        android:layout_alignTop="@id/row2"
+        android:layout_alignEnd="@id/column1"
+        android:layout_alignRight="@id/column1"
+        android:layout_alignBottom="@id/row2"
+        android:contentDescription="@string/event_time"
+        android:scaleType="center"
+        android:src="@drawable/ic_access_time_white_24dp"
+        android:tint="?android:attr/textColorHint"
+        tools:ignore="MissingPrefix"
+        tools:src="@drawable/ic_access_time_white_24dp" />
+
+    <TextView
+        android:id="@+id/text_view_all_day"
+        style="@style/Widget.AppTheme.EventEditView.TextView.Selectable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column2"
+        android:layout_alignLeft="@id/column2"
+        android:layout_alignTop="@id/row2"
+        android:layout_alignEnd="@id/column2"
+        android:layout_alignRight="@id/column2"
+        android:layout_alignBottom="@id/row2"
+        android:text="@string/all_day" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_all_day"
+        style="@style/Widget.AppTheme.EventEditView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column3"
+        android:layout_alignLeft="@id/column3"
+        android:layout_alignTop="@id/row2"
+        android:layout_alignEnd="@id/column3"
+        android:layout_alignRight="@id/column3"
+        android:layout_alignBottom="@id/row2" />
+
+    <!-- Row 3 -->
+    <TextView
+        android:id="@+id/text_view_start_date"
+        style="@style/Widget.AppTheme.EventEditView.TextView.Selectable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column2"
+        android:layout_alignLeft="@id/column2"
+        android:layout_alignTop="@id/row3"
+        android:layout_alignEnd="@id/column2"
+        android:layout_alignRight="@id/column2"
+        android:layout_alignBottom="@id/row3"
+        tools:text="Friday, Mar 18th" />
+
+    <TextView
+        android:id="@+id/text_view_start_time"
+        style="@style/Widget.AppTheme.EventEditView.TextView.Selectable.End"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column3"
+        android:layout_alignLeft="@id/column3"
+        android:layout_alignTop="@id/row3"
+        android:layout_alignEnd="@id/column3"
+        android:layout_alignRight="@id/column3"
+        android:layout_alignBottom="@id/row3"
+        tools:text="8:30 AM" />
+
+    <!-- Row 4 -->
+    <TextView
+        android:id="@+id/text_view_end_date"
+        style="@style/Widget.AppTheme.EventEditView.TextView.Selectable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column2"
+        android:layout_alignLeft="@id/column2"
+        android:layout_alignTop="@id/row4"
+        android:layout_alignEnd="@id/column2"
+        android:layout_alignRight="@id/column2"
+        android:layout_alignBottom="@id/row4"
+        tools:text="Friday, Mar 18th" />
+
+    <TextView
+        android:id="@+id/text_view_end_time"
+        style="@style/Widget.AppTheme.EventEditView.TextView.Selectable.End"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column3"
+        android:layout_alignLeft="@id/column3"
+        android:layout_alignTop="@id/row4"
+        android:layout_alignEnd="@id/column3"
+        android:layout_alignRight="@id/column3"
+        android:layout_alignBottom="@id/row4"
+        tools:text="10:30 AM" />
+
+    <!-- Row 5 -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column1"
+        android:layout_alignLeft="@id/column1"
+        android:layout_alignTop="@id/row5"
+        android:layout_alignEnd="@id/column1"
+        android:layout_alignRight="@id/column1"
+        android:layout_alignBottom="@id/row5"
+        android:contentDescription="@string/event_calendar"
+        android:scaleType="center"
+        android:src="@drawable/ic_event_white_24dp"
+        android:tint="?android:attr/textColorHint"
+        tools:ignore="MissingPrefix"
+        tools:src="@drawable/ic_event_white_24dp" />
+
+    <TextView
+        android:id="@+id/text_view_calendar"
+        style="@style/Widget.AppTheme.EventEditView.TextView.Selectable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column2"
+        android:layout_alignLeft="@id/column2"
+        android:layout_alignTop="@id/row5"
+        android:layout_alignEnd="@id/column3"
+        android:layout_alignRight="@id/column3"
+        android:layout_alignBottom="@id/row5"
+        android:freezesText="true"
+        android:hint="@string/choose_calendar"
+        tools:text="My Calendar" />
+
+
+</merge>

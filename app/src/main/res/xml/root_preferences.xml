@@ -1,0 +1,66 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:title="General Settings">
+
+        <SwitchPreferenceCompat
+            android:enabled="true"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_baseline_photo_filter_24"
+            app:key="theme"
+            app:summaryOff="Switch to dark Theme"
+            app:summaryOn="Switch to light Theme"
+            app:title="Theme" />
+
+        <Preference
+            app:defaultValue="false"
+            app:enabled="true"
+            app:icon="@drawable/ic_baseline_memory_24"
+            app:key="ClearCache"
+            app:summaryOff="Clear cache memory"
+            app:summaryOn="Clear cache memory"
+            app:title="Clear Cache" />
+
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:enabled="true"
+            app:icon="@drawable/ic_baseline_system_update_24"
+            app:key="update_alert"
+            app:summaryOff="On this for getting our app update notification"
+            app:summaryOn="Off this for not getting our app update notification"
+            app:title="App Update Alert" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/messages_header">
+
+        <EditTextPreference
+            app:icon="@drawable/ic_baseline_fingerprint_24"
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:title="Account Action">
+
+        <Preference
+            android:key="btndelforever"
+            android:summary="Delete your CAdmin account ! this is not revertible."
+            android:title="Delete your account."
+            app:icon="@drawable/ic_baseline_delete_sweep_24" />
+
+        <Preference
+            android:summary="Logout from this app"
+            android:title="Login with other email"
+            app:icon="@drawable/ic_round_exit_to_app_24"
+            app:key="btnLogout" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

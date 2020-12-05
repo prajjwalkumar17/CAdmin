@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_margin="1dp">
+
+    <ImageView
+        android:id="@+id/project_videos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="@dimen/padding_10"
+        android:layout_marginBottom="3dp"
+        android:background="#A5E3A5" />
+
+    <ImageButton
+        android:id="@+id/play_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ic_baseline_play_circle_filled_24" />
+
+</RelativeLayout>

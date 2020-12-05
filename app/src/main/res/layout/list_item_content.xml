@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/listPreferredItemHeight">
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/blue50" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_view_time"
+            android:layout_width="@dimen/time_width"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/horizontal_padding"
+            android:paddingLeft="@dimen/horizontal_padding"
+            tools:ignore="RtlSymmetry"
+            tools:text="4:30 PM" />
+
+        <TextView
+            android:id="@+id/text_view_title"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/horizontal_padding"
+            android:paddingLeft="@dimen/horizontal_padding"
+            android:paddingEnd="@dimen/horizontal_padding"
+            android:paddingRight="@dimen/horizontal_padding"
+            tools:text="Event" />
+
+    </LinearLayout>
+
+</FrameLayout>

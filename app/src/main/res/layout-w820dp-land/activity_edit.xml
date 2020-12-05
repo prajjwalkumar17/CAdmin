@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    tools:context=".core.calendar.EditActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/form_title"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="@dimen/calendar_width"
+        android:layout_height="@dimen/calendar_width"
+        android:layout_marginTop="@dimen/margin_form"
+        android:breakStrategy="balanced"
+        android:gravity="center"
+        android:textColor="?android:attr/textColorPrimaryInverseNoDisable"
+        tools:ignore="UnusedAttribute,InconsistentLayout"
+        tools:text="@string/create_event" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/calendar_width"
+        android:layout_marginLeft="@dimen/calendar_width"
+        android:layout_marginTop="@dimen/margin_form"
+        android:layout_marginEnd="@dimen/margin_form"
+        android:layout_marginRight="@dimen/margin_form"
+        android:background="?android:attr/colorBackground"
+        android:elevation="@dimen/default_elevation"
+        android:fillViewport="true"
+        tools:ignore="UnusedAttribute">
+
+        <com.thundersharp.cadmin.core.calendar.widget.EventEditView
+            android:id="@+id/event_edit_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

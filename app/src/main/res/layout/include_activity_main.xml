@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:divider="@drawable/horizontal_divider"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:showIn="@layout/activity_main_calendar">
+
+    <com.thundersharp.cadmin.core.calendar.widget.EventCalendarView
+        android:id="@id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/colorBackground"
+        android:elevation="@dimen/default_elevation"
+        android:visibility="gone"
+        tools:ignore="UnusedAttribute"
+        tools:visibility="visible" />
+
+    <com.thundersharp.cadmin.core.calendar.widget.AgendaView
+        android:id="@id/agenda_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

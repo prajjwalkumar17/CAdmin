@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thundersharp.cadmin">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+
+        <activity android:name=".ui.activity.PdfLoader"></activity>
+        <activity android:name=".ui.activity.WeightConverter" />
+        <activity android:name=".ui.activity.TemperatureConverter" />
+        <activity android:name=".ui.activity.LengthConverter" />
+        <activity android:name=".ui.activity.AreaConverter" />
+        <activity android:name=".ui.activity.UnitConverter" />
+        <activity android:name=".ui.activity.Scientific_Calc" />
+        <activity android:name=".ui.activity.Login_reg" />
+        <activity android:name=".ui.startup.Startup">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".ui.activity.ChatActivity" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".core.chats.fcm.MyFirebaseMessagingService" />
+
+        <activity
+            android:name=".ui.activity.EditNoteActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".core.calculators.CalculatorNorm"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".ui.activity.Calendar"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".core.calendar.MainActivityCalander" />
+        <activity
+            android:name=".core.calendar.EditActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.activity.History" />
+        <activity android:name=".ui.activity.CurrencyConverter" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

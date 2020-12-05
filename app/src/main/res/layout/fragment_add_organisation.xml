@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/org_manager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp"
+    tools:context=".ui.fragment.AddOrganisationFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/texttop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_10"
+            android:fontFamily="monospace"
+            android:text="New Organisation"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/descimg1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texttop"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="monospace"
+            android:text="Click down the logo to set your company logo"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:id="@+id/upload_org_logo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/descimg1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/hierarchy" />
+
+        <Button
+            android:id="@+id/btn_upload_org"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edittexts"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/stroke1"
+            android:padding="@dimen/padding_10"
+            android:text="Add Organisation"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/textbottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_upload_org"
+            android:layout_marginTop="15dp"
+            android:fontFamily="monospace"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Add new organisation instantly by clicking on this create button, Later you can add members,description,media to this organisation from organisation section."
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/edittexts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upload_org_logo"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/upload_org_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#101010"
+                app:boxStrokeColor="#2196F3"
+                app:counterEnabled="true"
+                app:counterMaxLength="30">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Organisation name"
+                    android:inputType="text"
+                    android:maxEms="30"
+                    android:paddingLeft="19dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="#0E0E0E"
+                    android:textColorHint="#101010" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/upload_org_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_10"
+                android:textColorHint="#101010"
+                app:boxStrokeColor="#2196F3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Organisation description"
+                    android:inputType="text"
+                    android:paddingLeft="19dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="#0E0E0E"
+                    android:textColorHint="#101010" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

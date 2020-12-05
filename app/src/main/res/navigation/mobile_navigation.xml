@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.thundersharp.cadmin.ui.fragment.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_notes"
+            app:destination="@id/nav_notes"
+            app:enterAnim="@anim/left_to_right"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_work_force"
+        android:name="com.thundersharp.cadmin.ui.fragment.WorkForce"
+        android:label="Work Force"
+        tools:layout="@layout/fragment_work_force" />
+
+    <fragment
+        android:id="@+id/nav_organisation"
+        android:name="com.thundersharp.cadmin.ui.fragment.Organisation"
+        android:label="Organisation"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_cal"
+        android:name="com.thundersharp.cadmin.ui.fragment.Organisation_cal"
+        android:label="Organisation calender"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_proj"
+        android:name="com.thundersharp.cadmin.ui.fragment.ProjectsFragment"
+        android:label="Projects"
+        tools:layout="@layout/fragment_projects" />
+
+    <fragment
+        android:id="@+id/nav_add_project"
+        android:name="com.thundersharp.cadmin.ui.fragment.AddProject"
+        android:label="Add Projects"
+        tools:layout="@layout/fragment_add_project" />
+
+    <fragment
+        android:id="@+id/nav_finance"
+        android:name="com.thundersharp.cadmin.ui.fragment.Finance"
+        android:label="Finance"
+        tools:layout="@layout/fragment_finance" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.thundersharp.cadmin.ui.settings.SettingsActivity$SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/settings_activity" />
+
+
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.thundersharp.cadmin.ui.fragment.PNotes"
+        android:label="Personal notes"
+        tools:layout="@layout/fragment_p_notes" />
+
+    <fragment
+        android:id="@+id/nav_chats"
+        android:name="com.thundersharp.cadmin.ui.fragment.chats.UserListingFragment"
+        android:label="Groupie"
+        tools:layout="@layout/fragment_user_listing" />
+
+    <fragment
+        android:id="@+id/nav_org"
+        android:name="com.thundersharp.cadmin.ui.fragment.AddOrganisationFragment"
+        android:label="Add a organisation"
+        tools:layout="@layout/fragment_add_organisation" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.thundersharp.cadmin.ui.fragment.Profile"
+        android:label="Your profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_org_details"
+        android:name="com.thundersharp.cadmin.ui.fragment.OrginasationDetails"
+        android:label="Organisation details"
+        tools:layout="@layout/fragment_orginasation_details" />
+
+    <fragment
+        android:id="@+id/nav_proj_info"
+        android:name="com.thundersharp.cadmin.ui.fragment.projetinfo.ProjectDetails"
+        android:label="Project details"
+        tools:layout="@layout/project_info" />
+
+
+</navigation>
